@@ -1,0 +1,66 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+#- entity: ingredient
+  # examples: |
+  #   - [potatoes](ingredient)
+  #   - [tomatoes](ingredient)
+  #   - [chicken](ingredient)
+  #   - [mushrooms](ingredient)
+  #   - [onions](ingredient)
+
+- intent: ask_recipe
+  examples: |
+    - Can you give me a recipe with [potatoes](ingredient)?
+    - What can I cook with [tomatoes](ingredient)?
+    - I want to make something with [chicken](ingredient).
+    - Can you suggest a recipe using [mushrooms](ingredient)?
+    - I have only [cucumber](ingredient) in my fridge

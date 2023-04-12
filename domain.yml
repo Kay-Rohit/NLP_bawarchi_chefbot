@@ -1,0 +1,41 @@
+version: "3.1"
+
+intents:
+- greet
+- ask_recipe
+- goodbye
+- affirm
+- deny
+
+entities:
+- ingredient
+
+slots:
+  ingredient:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: ingredient
+      # intent: ask_recipe
+
+responses:
+  utter_greet:
+  - text: "Hello! I'm here to help you with your cooking. What ingredient would you like to use?"
+
+  utter_goodbye:
+  - text: "Goodbye! Have a great day."
+
+  utter_ask_ingredient:
+  - text: "What ingredient would you like to use?"
+
+actions:
+- action_give_recipe
+
+templates:
+  utter_sorry_no_recipe:
+    text: "I'm sorry, I couldn't find a recipe with that ingredient. Please try another one."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

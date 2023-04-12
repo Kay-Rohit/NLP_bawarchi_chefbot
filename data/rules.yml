@@ -1,0 +1,13 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+# - rule: Say 'Here is your recipe' anytime the user asks for it
+#   steps:
+#   - intent: 
+#   - action: utter_give_recipe
