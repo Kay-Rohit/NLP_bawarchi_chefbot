@@ -49,13 +49,22 @@ nlu:
     - no way
     - not really
 
-#- entity: ingredient
-  # examples: |
-  #   - [potatoes](ingredient)
-  #   - [tomatoes](ingredient)
-  #   - [chicken](ingredient)
-  #   - [mushrooms](ingredient)
-  #   - [onions](ingredient)
+- intent: want_to_cook
+  examples: |
+    - I want to eat
+    - I have nothing to eat
+    - I want to cook
+    - I want to make food
+    - I want to make something
+    - food
+    - eat
+    - I am hungry
+    - hungry
+    - I want to try new thing
+    - What can i make
+    - I have some ingredients in mind
+    - Suggest me a recipe
+    - give me a recipe
 
 - intent: ask_recipe
   examples: |
@@ -64,3 +73,14 @@ nlu:
     - I want to make something with [chicken](ingredient).
     - Can you suggest a recipe using [mushrooms](ingredient)?
     - I have only [cucumber](ingredient) in my fridge
+
+- intent: giving_ingredients
+  examples: |
+    - [potatoes](ingredient_list), [tomatoes](ingredient_list)
+    - [chicken](ingredient_list), [onions](ingredient_list)
+    - [potatoes](ingredient_list), [tomatoes](ingredient_list), [karela](ingredient_list)
+    - [paneer](ingredient_list), [butter](ingredient_list), [onions](ingredient_list)
+    - [cucumber](ingredient_list)
+    - [onions](ingredient_list)
+    - [mushrooms](ingredient_list)
+    - [mushroom](ingredient_list), [chana](ingredient_list), [karela](ingredient_list), [chole](ingredient_list)

@@ -2,9 +2,12 @@ version: "3.1"
 
 stories:
 
-- story: happy path
+- story: ask recipe path
   steps:
   - intent: greet
   - action: utter_greet
   - intent: ask_recipe
   - action: action_give_recipe
+  - action: utter_confirm
+  - intent: affirm
+  - action: utter_thankyou

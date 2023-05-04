@@ -7,7 +7,12 @@ rules:
   - intent: goodbye
   - action: utter_goodbye
 
-# - rule: Say 'Here is your recipe' anytime the user asks for it
-#   steps:
-#   - intent: 
-#   - action: utter_give_recipe
+- rule: Ask for recipe anytime user wants it
+  steps:
+  - intent: want_to_cook
+  - action: utter_want_to_cook
+
+- rule: Give recipe when even user gives ingredients
+  steps:
+  - intent: giving_ingredients
+  - action: action_give_recipe_from_ingredients

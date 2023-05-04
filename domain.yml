@@ -6,9 +6,12 @@ intents:
 - goodbye
 - affirm
 - deny
+- want_to_cook
+- giving_ingredients
 
 entities:
 - ingredient
+- ingredient_list
 
 slots:
   ingredient:
@@ -17,7 +20,12 @@ slots:
     mappings:
     - type: from_entity
       entity: ingredient
-      # intent: ask_recipe
+  ingredient_list:
+    type: list
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: ingredient_list
 
 responses:
   utter_greet:
@@ -26,11 +34,21 @@ responses:
   utter_goodbye:
   - text: "Goodbye! Have a great day."
 
-  utter_ask_ingredient:
+  utter_want_to_cook:
   - text: "What ingredient would you like to use?"
+
+  utter_confirm:
+  - text: "Are you happy with the recipe?"
+
+  utter_sorry:
+  - text: "Sorry for that, give me ingredients so that i can suggest some good recipe for you"
+
+  utter_thankyou:
+  - text: "Thank you for using your Personalized Bawarchi"
 
 actions:
 - action_give_recipe
+- action_give_recipe_from_ingredients
 
 templates:
   utter_sorry_no_recipe:
